@@ -28,14 +28,22 @@ public class Program {
         System.out.println(seller);
 
         System.out.println("\n=== Teste número 2: seller findByDepartment ");
-       Department department = new Department(2,null);
+        Department department = new Department(2,null);
         List<Seller> list = sellerDao.findByDepartment(department);
 
         for (Seller sell : list) {
             System.out.println(sell);
         }
+
+        System.out.println("\n=== Teste número 3: seller findAll ");
+        list = sellerDao.findAll();
+
+        for (Seller sell : list) {
+            System.out.println(sell);
     }
 }
+}
+
 
 
 
