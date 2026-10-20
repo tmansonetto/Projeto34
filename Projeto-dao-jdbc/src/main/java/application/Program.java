@@ -41,6 +41,11 @@ public class Program {
         for (Seller sell : list) {
             System.out.println(sell);
     }
+        System.out.println("\n=== Teste número 4: seller insert ");
+        Seller newSeller = new Seller(null,"Thiago", "tm@gmail.com", new Date(),5000.0,department);
+        sellerDao.insert(newSeller);
+        System.out.println("Seller inserted successfully id=" + newSeller.getId() );
+
 }
 }
 
