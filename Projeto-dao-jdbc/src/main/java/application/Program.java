@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.sql.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.List;
 
 public class Program {
     public static void main(String[] args) throws IOException {
@@ -22,10 +23,17 @@ public class Program {
 
         System.out.println();
         SellerDao sellerDao = DaoFactory.createSellerDao();
-        System.out.println("Teste número 1: ");
+        System.out.println("Teste número 1: seller findById ");
         Seller seller = sellerDao.findById(3);
-
         System.out.println(seller);
+
+        System.out.println("\n=== Teste número 2: seller findByDepartment ");
+       Department department = new Department(2,null);
+        List<Seller> list = sellerDao.findByDepartment(department);
+
+        for (Seller sell : list) {
+            System.out.println(sell);
+        }
     }
 }
 
