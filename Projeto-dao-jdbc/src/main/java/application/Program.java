@@ -46,7 +46,26 @@ public class Program {
         sellerDao.insert(newSeller);
         System.out.println("Seller inserted successfully id=" + newSeller.getId() );
 
+        System.out.println("\n=== Teste número 3: seller findAll ");
+        list = sellerDao.findAll();
+
+        for (Seller sell : list) {
+            System.out.println(sell);
+        }
+        System.out.println("\n=== Teste número 5: seller update ");
+        newSeller = sellerDao.findById(3);
+        newSeller.setName("Mansonetto");
+        sellerDao.update(newSeller);
+        System.out.println("\nUpdate done! ");
+
+        System.out.println("\n=== Teste número 3: seller findAll ");
+        list = sellerDao.findAll();
+
+        for (Seller sell : list) {
+            System.out.println(sell);
+        }
 }
+
 }
 
 
