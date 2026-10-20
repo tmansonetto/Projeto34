@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Projeto-dao-jdbc" />
         <module name="Projeto-jdbc" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Projeto-dao-jdbc" target="25" />
       <module name="Projeto-jdbc2" target="25" />
       <module name="Projeto-jdbc3" target="25" />
       <module name="Projeto-jdbc4" target="25" />
