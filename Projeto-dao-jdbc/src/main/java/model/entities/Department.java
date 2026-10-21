@@ -3,14 +3,14 @@ package model.entities;
 import java.util.Objects;
 
 public class Department implements java.io.Serializable {
-    private int id;
+    private Integer id;
     private String name;
     private static final long serialVersionUID=1l;
 
     public Department() {
     }
 
-    public Department(int id, String name) {
+    public Department(Integer id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -19,7 +19,7 @@ public class Department implements java.io.Serializable {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

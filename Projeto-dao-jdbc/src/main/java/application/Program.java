@@ -16,10 +16,11 @@ import java.sql.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) throws IOException {
-
+        Scanner sc = new Scanner(System.in);
 
         System.out.println();
         SellerDao sellerDao = DaoFactory.createSellerDao();
@@ -64,6 +65,21 @@ public class Program {
         for (Seller sell : list) {
             System.out.println(sell);
         }
+        System.out.println("\n=== Teste número 6: seller delete ");
+        System.out.print("Digite o códdigo do vendedor para exclusão: ");
+        int id = sc.nextInt();
+        sellerDao.deleteById(id);
+
+        System.out.println("\nDelete done! ");
+
+        System.out.println("\n=== Teste número 3: seller findAll ");
+        list = sellerDao.findAll();
+
+        for (Seller sell : list) {
+            System.out.println(sell);
+        }
+
+        sc.close();
 }
 
 }
