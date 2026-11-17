@@ -1,4 +1,4 @@
-user=postgres
+user=YOUR_USER
 password=YOUR_PASSWORD
 dburl=jdbc:postgresql://localhost:5432/coursejdbc?currentSchema=coursejdbc
 useSSL=false
